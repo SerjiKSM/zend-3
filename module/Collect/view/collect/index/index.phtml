@@ -1,0 +1,34 @@
+<?php
+
+$title = 'My collects';
+$this->headTitle($title);
+?>
+<h1><?php echo $this->escapeHtml($title); ?></h1>
+
+<table class="table">
+    <tr>
+        <th>category_id</th>
+        <th>title</th>
+        <th>product_id</th>
+        <th>&nbsp;</th>
+    </tr>
+    <?php if (!empty($collects)) : ?>
+        <?php foreach ($collects as $collect) : ?>
+            <tr>
+                <td>
+                    <a href="<?php echo $this->url('products', array('action'=>'index', 'id' => $collect[0]["collectionId"]));?>">
+                        <?php echo $this->escapeHtml($collect[0]["collectionId"]);?>
+                    </a>
+                </td>
+                <td>
+                    <a href="<?php echo $this->url('products', array('action'=>'index', 'id' => $collect[0]["collectionId"]));?>">
+                        <?php echo $this->escapeHtml($collect['title']);?>
+                    </a>
+                </td>
+                <td>
+                    <?php echo $this->escapeHtml($collect[0]["productId"]);?>
+                </td>
+            </tr>
+        <?php endforeach; ?>
+    <?php endIf; ?>
+</table>

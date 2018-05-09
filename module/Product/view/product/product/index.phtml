@@ -1,0 +1,24 @@
+<?php
+
+$title = 'My products';
+$this->headTitle($title);
+?>
+<h1><?php echo $this->escapeHtml($title); ?></h1>
+
+<table class="table">
+    <tr>
+        <th>id</th>
+        <th>product_type</th>
+        <th>title</th>
+        <th>body_html</th>
+        <th>&nbsp;</th>
+    </tr>
+    <?php foreach ($products as $product) : ?>
+        <tr>
+            <td><?php echo $this->escapeHtml($product->id);?></td>
+            <td><?php echo $this->escapeHtml($product->product_type);?></td>
+            <td><?php echo $this->escapeHtml($product->title);?></td>
+            <td><?php echo $this->escapeHtml($product->body_html);?></td>
+        </tr>
+    <?php endforeach; ?>
+</table>

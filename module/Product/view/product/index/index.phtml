@@ -1,0 +1,33 @@
+<?php
+
+$title = 'Collection products';
+$this->headTitle($title);
+?>
+
+<h1><?php echo $this->escapeHtml($title); ?></h1>
+
+
+<table class="table">
+    <tr>
+        <th>id_colection</th>
+        <th>id_product</th>
+        <th>product_type</th>
+        <th>title</th>
+        <th>body_html</th>
+    </tr>
+    <?php if (!empty($products)) : ?>
+        <?php foreach ($products as $product) : ?>
+            <tr>
+                <td>
+                    <?php echo $this->escapeHtml($product['collectionId']);?>
+                </td>
+                <td>
+                    <?php echo $this->escapeHtml($product['id']);?>
+                </td>
+                <td><?php echo $this->escapeHtml($product['productType']);?></td>
+                <td><?php echo $this->escapeHtml($product['title']);?></td>
+                <td><?php echo $this->escapeHtml($product['bodyHtml']);?></td>
+            </tr>
+        <?php endforeach; ?>
+    <?php endIf; ?>
+</table>

@@ -33,7 +33,7 @@ CREATE TABLE `custom_collections` (
   `published_at` datetime DEFAULT NULL,
   `published_scope` enum('global') DEFAULT NULL,
   `sort_order` enum('alpha-asc','alpha-desc','best-selling','created','created-desc','manual','price-asc','price-desc') DEFAULT NULL,
-  `template_suffix` varchar(300) DEFAULT NULL,
+  `template_suffix` varchar(255) DEFAULT NULL,
   `title` varchar(255) DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id_num`)

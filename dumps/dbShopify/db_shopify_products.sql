@@ -30,17 +30,17 @@ CREATE TABLE `products` (
   `id` bigint(13) DEFAULT NULL,
   `images` text,
   `options` text,
-  `product_type` varchar(300) DEFAULT NULL,
+  `product_type` varchar(255) DEFAULT NULL,
   `published_at` datetime DEFAULT NULL,
   `published_scope` enum('web','global') DEFAULT NULL,
   `tags` text,
-  `template_suffix` varchar(300) DEFAULT NULL,
-  `title` varchar(300) DEFAULT NULL,
-  `metafields_global_title_tag` varchar(300) DEFAULT NULL,
-  `metafields_global_description_tag` varchar(300) DEFAULT NULL,
+  `template_suffix` varchar(255) DEFAULT NULL,
+  `title` varchar(255) DEFAULT NULL,
+  `metafields_global_title_tag` varchar(255) DEFAULT NULL,
+  `metafields_global_description_tag` varchar(255) DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL,
   `variants` text,
-  `vendor` varchar(300) DEFAULT NULL,
+  `vendor` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id_num`)
 ) ENGINE=InnoDB AUTO_INCREMENT=42 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
